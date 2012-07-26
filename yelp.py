@@ -22,7 +22,6 @@ class Yelp():
         if url_params:
             encoded_params = urllib.urlencode(url_params)
         url = 'http://{host}{path}?{params}'.format(host=self.host, path=path, params=encoded_params)
-        print url
 
         # Sign the URL
         consumer = oauth2.Consumer(self.consumer_key, self.consumer_secret)
